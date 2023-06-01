@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Course Name</th>
+      </tr>
+    </thead>
+    <tbody>
+
+{% for course in courses %}
+<tr>
+    <td>{{course.courseId}}</td>
+    <td>{{course.courseName}}</td>
+  </tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock content %} 
+
+
